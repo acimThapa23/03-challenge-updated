@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Challenge-03</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;900&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"   type="text/css" href="styles.css"/>
+  </head>
+  <body>
+
+    <main>
+      <section class="section-center">
+        <form class="form-control grid">
+          <div class="container-day">
+            <label for="day">DAY</label>
+            <input class="" type="number" id="day" placeholder="DD"/>
+            <span class="alert-span" >The field is required</span>
+            
+          </div>
+          <div class="container-month">
+            <label for="month" >MONTH</label>
+            <input type="number" class="" id="month" placeholder="MM"/>
+            <span class="alert-span">The field is required</span>
+            
+          </div>
+          <div class="container-year">
+            <label for="year" class="yearLabel">YEAR</label>
+            <input type="number"  class="" id="year" placeholder="YY"  />
+            <span class="alert-span">The field is required</span>
+          </div>
+          <div class="btn-container">
+          
+           <button type="submit" class="btn">
+            <img src="./assets/images/icon-arrow.svg"/>
+           
+          </button> 
+          </div>
+        
+          
+        </form>
+    
+        
+        <div class="container-result">
+            <h1><span>38</span> Years</h1>
+            <h1><span>2</span> Months</h1>
+            <h1><span>26</span> Days</h1>
+        </div>
+
+
+      </section>
+    </main>
+    
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Acim</a>. -->
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

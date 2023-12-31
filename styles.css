@@ -1,0 +1,254 @@
+:root {
+  --mobile-width: 375px;
+  --desktop: 1440px;
+
+  --color-primary-300: hsl(259, 100%, 65%);
+  --color-primary-700: hsl(0, 100%, 67%);
+
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-300: hsla(0, 0%, 94%, 0.63);
+  --color-neutral-grey-300: hsl(0, 0%, 86%);
+  --color-neutral-grey-700: hsla(0, 1%, 44%);
+  --color-neutral-900: hsl(0, 0%, 8%);
+
+  --font-size-input: 32px;
+
+  --font-family: "Hanken Grotesk";
+
+  --fw-400-i: 400;
+  --fw-700: 700;
+  --fw-800-i: 800;
+
+  --font-style: italic;
+}
+
+/* general reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  width: 70px;
+  background-color: var(--color-primary-300);
+  height: 70px;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+body {
+  background-color: var(--color-neutral-300);
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+button {
+  /* color: none; */
+  border: none;
+
+  font-size: 1.75em;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-inline: auto;
+  margin-bottom: -30px;
+  background-color: transparent;
+}
+
+img:hover {
+  background-color: hsla(259, 100%, 65%, 0.7);
+  cursor: pointer;
+}
+input {
+  width: 100px;
+  display: inline-block;
+}
+
+/* end of general reset */
+
+/* @media only screen and (max-width: 500px) { */
+main {
+  width: 100vw;
+  height: 300px;
+  /* background-color: var(--color-neutral-300); */
+  /* overflow: hidden; */
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+.section-center {
+  /* box-shadow: 0px 2px 1px grey; */
+  padding: 1.2em;
+  width: 380px;
+  margin: 10em auto;
+
+  border-radius: 2em;
+  border-bottom-right-radius: 100px;
+  background-color: var(--color-neutral-100);
+  /* */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.form-control {
+  margin-top: 0em;
+  margin-bottom: 4.2em;
+  /* border-bottom: 1px solid grey; */
+  position: relative;
+}
+
+.form-control div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control input {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  border-radius: 0.45em;
+  border: 1px solid grey;
+  font-weight: var(--fw-800-i);
+  font-size: 1.25em;
+}
+
+label {
+  margin-bottom: 0.25em;
+  color: var(--color-neutral-grey-700);
+  font-weight: var(--fw-700);
+}
+
+img {
+  margin-top: 20px;
+}
+
+.container-result {
+  margin-left: 20px;
+}
+
+.container-result h1 {
+  font-size: 3.78em;
+  text-transform: lowercase;
+  font-style: italic;
+  font-weight: var(--fw-800-i);
+}
+
+.container-result h1 span {
+  color: var(--color-primary-300);
+}
+/* } */
+
+.error {
+  /* border: 1px solid var(--color-primary-700); */
+  outline: 1px solid red;
+}
+
+.show-alert {
+  color: var(--color-primary-700);
+}
+
+form span {
+  font-size: 13px;
+  margin-top: 10px;
+  color: var(--color-primary-700);
+  font-style: italic;
+  visibility: hidden;
+}
+
+.btn-container {
+  width: 100%;
+  margin-inline: auto;
+  grid-column: span 3;
+  margin-block: -16px;
+  border-bottom: 1px solid grey;
+  position: relative;
+}
+
+.show-span {
+  visibility: visible;
+}
+
+@media only screen and (min-width: 350px) {
+  body {
+    background-color: var(--color-neutral-300);
+    /* background-color: red; */
+  }
+
+  main {
+    height: 100vh;
+  }
+  .section-center {
+    margin-top: 8em;
+    width: 600px;
+    margin-inline: auto;
+    background-color: var(--color-neutral-100);
+    overflow: hidden;
+    /* background-color: red; */
+  }
+
+  .grid {
+    margin: 0px;
+  }
+
+  .form-control {
+    width: 600px;
+
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 88%;
+    margin-left: 20px;
+  }
+
+  img {
+    justify-self: flex-end;
+    align-self: flex-end;
+    position: absolute;
+    left: 300px;
+    top: -56px;
+  }
+
+  button {
+    justify-self: flex-end;
+    align-self: flex-end;
+    position: relative;
+    width: 200px;
+    height: 30px;
+  }
+
+  form span {
+    width: 120px;
+  }
+
+  .container-day {
+    margin-left: -120px;
+  }
+}
